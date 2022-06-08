@@ -1,4 +1,5 @@
 #!/bin/sh
-docker rm $(docker stop $(docker ps -a -q -f ancestor=<tungnh2022/jenkins-setup:latest>))
-docker pull tungnh2022/jenkins-setup:latest
-docker run -d -p 3000:3000 tungnh2022/jenkins-setup:latest
+#!/bin/sh
+#docker rmi  tungnh2022/apihello:latest
+docker container stop myjenkins
+docker run -d -p 3000:3000 --name myjenkins -rm tungnh2022/apihello:latest
