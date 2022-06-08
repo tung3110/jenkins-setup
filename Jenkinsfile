@@ -1,14 +1,14 @@
 	pipeline {
 		 agent any
 		 environment { 
-			  registry = "tungnh2022/apihello" 
-			  registryCredential = 'dockerhub_id' 
+			  registry = "tungnh2022/jenkins-setup" 
+			  registryCredential = 'dockerhub_id2' 
 			  dockerImage = '' 
 		 }
 		 stages {
 			 stage('Cloning Git') {
 				 steps {
-					 git branch: 'develop', url: 'https://github.com/tung3110/apiHello.git'
+					 git branch: 'develop', url: 'https://github.com/tung3110/jenkins-setup.git'
 				 }
 			 }
 			 stage('Building image') { 
