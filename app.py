@@ -8,7 +8,7 @@ def hello():
     return "Xin chào Nguyễn Huy Tùng"
 @app.route("/api/hello")
 def hello2():
-    return "Xin Chao API by Docker Container New 2"
+    return "Xin Chao API by Docker Container New"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 3000))
